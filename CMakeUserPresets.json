@@ -1,0 +1,75 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "Qt-Debug",
+      "inherits": "Qt-Default",
+      "binaryDir": "${sourceDir}/out/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_CXX_FLAGS": "-DQT_QML_DEBUG"
+      },
+      "toolchainFile": "C:/Software/vcpkg/scripts/buildsystems/vcpkg.cmake"
+    },
+    {
+      "name": "Qt-Release",
+      "inherits": "Qt-Default",
+      "binaryDir": "${sourceDir}/out/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      },
+      "toolchainFile": "C:/Software/vcpkg/scripts/buildsystems/vcpkg.cmake"
+    },
+    {
+      "hidden": true,
+      "name": "6.6.2",
+      "inherits": "Qt",
+      "environment": {
+        "QTDIR": "C:/SOFTWARE/QT/6.6.2/MSVC2019_64"
+      },
+      "architecture": {
+        "strategy": "external",
+        "value": "x64"
+      },
+      "generator": "Ninja",
+      "vendor": {
+        "qt-project.org/Version": {
+          "checksum": "qJAEywomyEJanhkxA/rggqx6Ccg="
+        }
+      }
+    },
+    {
+      "hidden": true,
+      "name": "Qt-Default",
+      "inherits": "Qt6",
+      "vendor": {
+        "qt-project.org/Default": {
+          "checksum": "zmiH91sKdx4JvQ6Y/b9vpZgNsVc="
+        }
+      }
+    },
+    {
+      "hidden": true,
+      "name": "Qt6",
+      "inherits": "Qt",
+      "environment": {
+        "QTDIR": "C:/SOFTWARE/QT/6.6.2/MSVC2019_64"
+      },
+      "architecture": {
+        "strategy": "external",
+        "value": "x64"
+      },
+      "generator": "Ninja",
+      "vendor": {
+        "qt-project.org/Version": {
+          "checksum": "rCZVMJ97nvqjnHCRXxmYtnQ/Sek="
+        }
+      }
+    }
+  ],
+  "vendor": {
+    "qt-project.org/Presets": {
+      "checksum": "hQ6yRXscLKYaA8iUoX/HKuf03wM="
+    }
+  }
+}
