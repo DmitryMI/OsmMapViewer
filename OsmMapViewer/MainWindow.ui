@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1054</width>
-    <height>689</height>
+    <width>1383</width>
+    <height>761</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -31,14 +31,20 @@
       <item>
        <layout class="QFormLayout" name="formLayout">
         <item row="0" column="0">
-         <widget class="QLabel" name="renderCenterTextLabel">
+         <widget class="QLabel" name="viewCenterTextLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>View center:</string>
           </property>
          </widget>
         </item>
         <item row="0" column="1">
-         <widget class="QLabel" name="renderCenterLabel">
+         <widget class="QLabel" name="viewCenterLabel">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
             <horstretch>0</horstretch>
@@ -47,7 +53,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>200</width>
+            <width>300</width>
             <height>0</height>
            </size>
           </property>
@@ -58,6 +64,12 @@
         </item>
         <item row="1" column="0">
          <widget class="QLabel" name="viewSizeTextLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>View size:</string>
           </property>
@@ -73,7 +85,7 @@
           </property>
           <property name="minimumSize">
            <size>
-            <width>200</width>
+            <width>300</width>
             <height>0</height>
            </size>
           </property>
@@ -82,7 +94,58 @@
           </property>
          </widget>
         </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="overpassApiLabel">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Overpass URL:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="overpassUrlBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>300</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>https://overpass-api.de/api/interpreter</string>
+          </property>
+         </widget>
+        </item>
        </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="viewToBerlinButton">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>150</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Go to Berlin</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </item>
@@ -93,7 +156,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1054</width>
+     <width>1383</width>
      <height>22</height>
     </rect>
    </property>

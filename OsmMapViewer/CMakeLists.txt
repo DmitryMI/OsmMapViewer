@@ -28,8 +28,22 @@ add_executable(OsmMapViewer
     # resources.qrc
 )
 
+target_link_libraries(OsmMapViewer
+    PUBLIC
+        Qt6::Core
+        Qt6::Gui
+        Qt6::Widgets
+        Qt6::Network
+        Qt6::Widgets
+)
+
 target_link_libraries(OsmMapViewer PRIVATE Qt6::Widgets)
 
-# libxml2
 find_package(LibXml2 REQUIRED)
 target_link_libraries(OsmMapViewer PRIVATE LibXml2::LibXml2)
+
+find_package(mapnik REQUIRED)
+target_link_libraries(OsmMapViewer PRIVATE mapnik::mapnik)
+
+mapnik_find_plugin_dir(MAPNIK_PLUGIN_DIR)
+

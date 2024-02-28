@@ -4,6 +4,14 @@
   "license": "MIT",
   "dependencies": [
     "libxml2",
-    "mapnik"
+    {
+      "name": "mapnik",
+      "features": [
+        "input-sqlite",
+        "cairo",
+        "proj"
+      ]
+    },
+    "boost"
   ]
 }
